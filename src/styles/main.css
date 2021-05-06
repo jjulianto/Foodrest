@@ -1,0 +1,166 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #fea82f;
+}
+
+.skip-link {
+    position: absolute;
+    top: -80px;
+    left: 0;
+    width: 160px;
+    background-color: #fea82f;
+    color: white;
+    padding: 14px;
+    text-decoration: none;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+
+/* Navbar */
+
+.header-container {
+    width: 100%;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000;
+}
+
+.header-logo {
+    width: 40%;
+    margin-left: 5%;
+}
+
+.header-logo a {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 24px;
+    color: #fea82f;
+}
+
+#drawer {
+    width: 60%;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.nav-item {
+    margin-right: 10%;
+    list-style: none;
+}
+
+.nav-item a {
+    color: #fff;
+    min-width: 44px;
+    line-height: 44px;
+    display: inline-block;
+    font-size: 1em;
+    text-decoration: none;
+}
+
+.hamburger {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 32px;
+    margin: 0 5%;
+    display: block;
+    min-width: 44px;
+    min-height: 44px;
+}
+
+
+/* Hero */
+
+.hero {
+    margin-top: -5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient( to top, rgba(0, 0, 0, 0.651), rgba(0, 0, 0, 0.856)), url('../public/images/heros/hero-image_2.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.hero-inner {
+    color: #fff;
+    text-align: center;
+}
+
+.hero-text {
+    font-size: 1.6em;
+    margin-bottom: 5px;
+}
+
+.hero-inner .hero-title {
+    color: #fea82f;
+    font-weight: bolder;
+    font-size: 3.4em;
+    margin-bottom: 10px;
+}
+
+.hero-tagline {
+    font-size: 1.6em;
+    margin-bottom: 15px;
+}
+
+.hero-inner .hero-button {
+    cursor: pointer;
+    min-width: 44px;
+    min-height: 44px;
+    transition: 0.5s;
+    padding: 10px 20px;
+    border: 2px solid #fea82f;
+    background: none;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1em;
+    letter-spacing: 1.5px;
+    display: block;
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Poppins", sans-serif;
+}
+
+.hero-inner .hero-button:focus {
+    background: #fea82f;
+    color: #fff;
+    outline: 2px solid #fea82f;
+}
+
+.hero-inner .hero-button:hover {
+    background: #fea82f;
+    color: #fff;
+}
