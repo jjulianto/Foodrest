@@ -26,7 +26,7 @@ html {
     position: absolute;
     top: -80px;
     left: 0;
-    width: 160px;
+    width: 180px;
     background-color: #fea82f;
     color: white;
     padding: 14px;
@@ -78,12 +78,20 @@ html {
 }
 
 .nav-item a {
+    padding: 5px 15px;
     color: #fff;
     min-width: 44px;
     line-height: 44px;
     display: inline-block;
     font-size: 1em;
     text-decoration: none;
+}
+
+.nav-item a:hover {
+    font-weight: 500;
+    transition: 0.5s;
+    background: #fff;
+    color: #000;
 }
 
 .hamburger {
@@ -163,4 +171,41 @@ html {
 .hero-inner .hero-button:hover {
     background: #fea82f;
     color: #fff;
+}
+
+section {
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 1.6em;
+}
+
+.center {
+    margin: 3rem;
+    text-align: center;
+}
+
+.main-inner {
+    padding: 0 2.5rem !important;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.main-icon {
+    width: 100%;
+    padding: 0 2rem !important;
+    text-align: center;
+}
+
+.main-icon .material-icons {
+    vertical-align: middle !important;
+    padding-bottom: 20px;
+    user-select: none;
+}
+
+.main-icon span {
+    color: #fea82f;
+    font-size: 6rem;
 }

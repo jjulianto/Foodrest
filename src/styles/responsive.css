@@ -1,0 +1,12 @@
+@media screen and (max-width: 649px) {
+    .main-inner {
+        display: flex;
+        flex-direction: column;
+    }
+    .material-icons {
+        padding-bottom: 5px;
+    }
+    .main-icon p {
+        padding-bottom: 50px;
+    }
+}
