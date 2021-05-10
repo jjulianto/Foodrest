@@ -26,7 +26,7 @@ module.exports = {
         use: [{
           loader: 'file-loader',
           options: {
-              outputPath: './images',
+              outputPath: './images/heros',
               name: "[name].[ext]",
           },
       }]

@@ -1,77 +1,106 @@
+.restaurant-label {
+  text-align: center;
+}
+
 @media screen and (max-width: 649px) {
-    .main-inner {
-        display: flex;
-        flex-direction: column;
-    }
-    .material-icons {
-        padding-bottom: 5px;
-    }
-    .main-icon p {
-        padding-bottom: 50px;
-    }
+  .main-inner {
+    display: flex;
+    flex-direction: column;
+  }
+  .material-icons {
+    padding-bottom: 5px;
+  }
+  .main-icon p {
+    padding-bottom: 50px;
+  }
+  .restaurants {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 70px;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .restaurants {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 50px;
+  }
 }
 
 @media screen and (max-width: 719px) {
-    nav {
-        background-color: #fea82f;
-        z-index: 10;
-        width: 200px !important;
-        top: 0;
-        height: 100vh;
-        position: absolute;
-        -webkit-transform: translate(-300px, 0);
-        transform: translate(-300px, 0);
-        transition: transform 0.3s ease;
-    }
-    .open {
-        -webkit-transform: translate(0, 0);
-        transform: translate(0, 0);
-    }
-    .nav-list {
-        padding-left: 0 !important;
-        padding: 10px;
-        display: list-item;
-        text-align: left;
-    }
-    .nav-item a {
-        color: #fff;
-    }
-    .nav-item a:hover {
-        font-weight: 500;
-        width: 100%;
-        transition: 0.5s;
-        background: #fff;
-        color: #fea82f;
-    }
+  nav {
+    background-color: #fea82f;
+    z-index: 10;
+    width: 200px !important;
+    top: 0;
+    height: 100vh;
+    position: absolute;
+    -webkit-transform: translate(-300px, 0);
+    transform: translate(-300px, 0);
+    transition: transform 0.3s ease;
+  }
+  .open {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  .nav-list {
+    padding: 10px 0 !important;
+    display: list-item;
+    text-align: left;
+  }
+  .nav-item a {
+    color: #fff;
+  }
+  .nav-item a:hover {
+    font-weight: 500;
+    width: 100%;
+    transition: 0.5s;
+    background: #ff6701;
+    color: #fff;
+  }
+  .nav-item a:focus {
+    background: #ff6701;
+    color: #fff;
+    outline: 2px solid #ff6701;
+  }
+  .restaurant-label {
+    padding-top: 0;
+  }
 }
 
 @media screen and (min-width: 720px) {
-    .hamburger {
-        display: none;
-    }
-    .header-logo {
-        width: 20%;
-    }
-    #drawer {
-        width: 80%;
-    }
-    .nav-item {
-        width: 20%;
-    }
+  .hamburger {
+    display: none;
+  }
+  .header-logo {
+    width: 20%;
+  }
+  #drawer {
+    width: 80%;
+  }
+  .nav-item {
+    width: 20%;
+  }
 }
 
 @media screen and (min-width: 900px) {
-    .nav-item {
-        width: 15%;
-    }
+  .nav-item {
+    width: 15%;
+  }
+  .restaurants {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 @media screen and (min-width: 1200px) {
-    .nav-item {
-        width: 12%;
-    }
-    main {
-        text-align: center;
-        max-width: 1200px;
-    }
+  .nav-item {
+    width: 12%;
+  }
+  main {
+    text-align: center;
+    max-width: 1200px;
+  }
 }
