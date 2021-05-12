@@ -2,6 +2,12 @@
   text-align: center;
 }
 
+@media screen and (max-width: 390px) {
+  .restaurant-thumbnail {
+    height: 175px;
+  }
+}
+
 @media screen and (max-width: 649px) {
   .main-inner {
     display: flex;
@@ -40,10 +46,12 @@
     -webkit-transform: translate(-300px, 0);
     transform: translate(-300px, 0);
     transition: transform 0.3s ease;
+    display: none;
   }
   .open {
     -webkit-transform: translate(0, 0);
     transform: translate(0, 0);
+    display: block;
   }
   .nav-list {
     padding: 10px 0 !important;

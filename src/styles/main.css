@@ -270,6 +270,10 @@ p span.material-icons {
   line-height: 1.5em;
 }
 
+div .restaurant-parent {
+  text-align: center;
+}
+
 .restaurant-button {
   cursor: pointer;
   min-width: 44px;
@@ -284,6 +288,7 @@ p span.material-icons {
   text-decoration: none;
   font-size: 1em;
   width: 100%;
+  display: inline-block;
   font-family: "Poppins", sans-serif;
 }
 
