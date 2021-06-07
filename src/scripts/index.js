@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-unresolved
 import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/main.css';
 import '../styles/responsive.css';
@@ -8,21 +9,21 @@ const hero = document.querySelector('.hero');
 const main = document.querySelector('main');
 const drawer = document.querySelector('#drawer');
 
-hamburger.addEventListener('click', function(event) {
-    drawer.classList.toggle('open');
-    event.stopPropagation();
+hamburger.addEventListener('click', (event) => {
+  drawer.classList.toggle('open');
+  event.stopPropagation();
 });
 
-hero.addEventListener('click', function() {
-    drawer.classList.remove('open');
+hero.addEventListener('click', () => {
+  drawer.classList.remove('open');
 });
 
-main.addEventListener('click', function() {
-    drawer.classList.remove('open');
+main.addEventListener('click', () => {
+  drawer.classList.remove('open');
 });
 
 data.restaurants.forEach((restaurant) => {
-    const dataset =`
+  const dataset = `
         <article class="restaurant-item">
             <img class="restaurant-thumbnail" src="${restaurant.pictureId}" alt="${restaurant.name}">
             <div class="restaurant-content">
@@ -36,5 +37,5 @@ data.restaurants.forEach((restaurant) => {
             </div>
         </article>
     `;
-    document.getElementById("restaurant").innerHTML += dataset;
-  })
+  document.getElementById('restaurant').innerHTML += dataset;
+});

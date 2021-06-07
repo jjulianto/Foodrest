@@ -26,10 +26,10 @@ module.exports = {
         use: [{
           loader: 'file-loader',
           options: {
-              outputPath: './images/heros',
-              name: "[name].[ext]",
+            outputPath: './images/heros',
+            name: '[name].[ext]',
           },
-      }]
+        }],
       },
     ],
   },
