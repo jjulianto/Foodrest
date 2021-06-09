@@ -1,25 +1,17 @@
 // eslint-disable-next-line import/no-unresolved
-import 'regenerator-runtime'; /* for async await transpile */
+// eslint-disable-next-line import/no-extraneous-dependencies
+import 'regenerator-runtime';
 import '../styles/main.css';
 import '../styles/responsive.css';
 import data from '../DATA.json';
+import App from './views/app';
 
-const hamburger = document.querySelector('#hamburger');
-const hero = document.querySelector('.hero');
-const main = document.querySelector('main');
-const drawer = document.querySelector('#drawer');
-
-hamburger.addEventListener('click', (event) => {
-  drawer.classList.toggle('open');
-  event.stopPropagation();
-});
-
-hero.addEventListener('click', () => {
-  drawer.classList.remove('open');
-});
-
-main.addEventListener('click', () => {
-  drawer.classList.remove('open');
+// eslint-disable-next-line no-unused-vars
+const app = new App({
+  hamburger: document.querySelector('#hamburger'),
+  hero: document.querySelector('.hero'),
+  main: document.querySelector('main'),
+  drawer: document.querySelector('#drawer'),
 });
 
 data.restaurants.forEach((restaurant) => {

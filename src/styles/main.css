@@ -103,6 +103,7 @@ html {
   display: block;
   min-width: 44px;
   min-height: 44px;
+  cursor: pointer;
 }
 
 /* Hero */
