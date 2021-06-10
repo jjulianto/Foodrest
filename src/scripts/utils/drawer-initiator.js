@@ -1,17 +1,17 @@
 /* eslint-disable no-underscore-dangle */
 const DrawerInitiator = {
   init({
-    hamburger, hero, main, drawer,
+    hamburger, content, hero, drawer,
   }) {
     hamburger.addEventListener('click', (event) => {
       this._toggleDrawer(event, drawer);
     });
 
-    hero.addEventListener('click', (event) => {
+    content.addEventListener('click', (event) => {
       this._closeDrawer(event, drawer);
     });
 
-    main.addEventListener('click', (event) => {
+    hero.addEventListener('click', (event) => {
       this._closeDrawer(event, drawer);
     });
   },
