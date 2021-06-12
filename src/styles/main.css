@@ -258,7 +258,7 @@ h1 {
   text-align: left;
 }
 
-p span.material-icons {
+.restaurant-rating span.material-icons, .restaurant-city span.material-icons {
   position: relative;
   top: 6px;
   color: #fea82f;
@@ -302,6 +302,30 @@ div .restaurant-parent {
 .restaurant-button:hover {
   background: #ff6701;
   color: #fff;
+}
+
+#loader {
+  margin: 3% auto;
+  text-align: center;
+  z-index: 1;
+  width: 120px;
+  height: 120px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #fea82f;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.error-icon span.material-icons {
+  margin-top: 3%;
+  text-align: center;
+  color: #fea82f;
+  font-size: 10rem;
 }
 
 footer {

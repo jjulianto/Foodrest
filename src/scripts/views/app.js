@@ -2,6 +2,7 @@ import routes from '../routes/routes';
 import UrlParser from '../routes/url-parser';
 import './components/navbar';
 import './components/footer';
+import './components/restaurant-item';
 import DrawerInitiator from '../utils/drawer-initiator';
 
 /* eslint-disable no-underscore-dangle */

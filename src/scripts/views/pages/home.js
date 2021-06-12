@@ -1,5 +1,4 @@
 import restaurantData from '../../data/restaurantdb-source';
-import { createRestaurantItemTemplate } from '../templates/template-creator';
 
 const Home = {
   async render() {
@@ -24,6 +23,7 @@ const Home = {
 
         <section class="item">
             <h1 class="restaurant-label">Restoran yang sedang populer</h1>
+            <div id="loader"></div>
             <div id="restaurant" class="restaurants">
             </div>
         </section>
@@ -33,9 +33,35 @@ const Home = {
   async afterRender() {
     const restaurants = await restaurantData.restaurantList();
     const restaurantContainer = document.querySelector('.restaurants');
-    restaurants.forEach((restaurant) => {
-      restaurantContainer.innerHTML += createRestaurantItemTemplate(restaurant);
+    const loadingIndicator = document.querySelector('#loader');
+    if (restaurants) {
+      this.successRequest(restaurants, restaurantContainer, loadingIndicator);
+    } else {
+      this.failedRequest(restaurants, restaurantContainer, loadingIndicator);
+    }
+  },
+
+  async successRequest(restaurants, restaurantContainer, loadingIndicator) {
+    const restaurantsIt = restaurants;
+    const restaurantCon = restaurantContainer;
+    const loadIndi = loadingIndicator;
+
+    restaurantsIt.forEach((restaurant) => {
+      const restaurantItem = document.createElement('restaurant-item');
+      restaurantItem.data = restaurant;
+      restaurantCon.appendChild(restaurantItem);
     });
+    loadIndi.style.display = 'none';
+  },
+
+  async failedRequest(restaurants, restaurantContainer, loadingIndicator) {
+    const restaurantsIt = restaurants;
+    const loadIndi = loadingIndicator;
+    const restaurantCon = restaurantContainer;
+
+    loadIndi.style.display = '';
+    restaurantCon.innerHTML = '<p class="error-icon"><span class="material-icons">error</span></p>';
+    restaurantsIt.innerHTML = '<h1 style="text-align: center; margin-top: 10px;">Maaf, request tidak dapat dijalankan karena terdapat kesalahan.</h1>';
   },
 };
 
