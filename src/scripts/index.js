@@ -8,7 +8,6 @@ import App from './views/app';
 const app = new App({
   hamburger: document.querySelector('#hamburger'),
   drawer: document.querySelector('#drawer'),
-  hero: document.querySelector('.hero'),
   content: document.querySelector('main'),
 });
 

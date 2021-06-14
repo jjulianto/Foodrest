@@ -8,11 +8,10 @@ import DrawerInitiator from '../utils/drawer-initiator';
 /* eslint-disable no-underscore-dangle */
 class App {
   constructor({
-    hamburger, drawer, hero, content,
+    hamburger, drawer, content,
   }) {
     this._hamburger = hamburger;
     this._drawer = drawer;
-    this._hero = hero;
     this._content = content;
 
     this._initialAppShell();
@@ -22,7 +21,6 @@ class App {
     DrawerInitiator.init({
       hamburger: this._hamburger,
       drawer: this._drawer,
-      hero: this._hero,
       content: this._content,
     });
   }

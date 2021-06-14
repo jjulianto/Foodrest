@@ -6,10 +6,10 @@
 
 body,
 html {
-  margin: 0;
-  padding: 0;
   width: 100%;
   height: 100%;
+  margin: 0px;
+  padding: 0px;
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
 }
@@ -48,7 +48,6 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #000;
 }
 
 .header-logo {
@@ -73,7 +72,6 @@ html {
 }
 
 .nav-item {
-  margin-right: 10%;
   list-style: none;
   position: relative;
 }
@@ -81,7 +79,7 @@ html {
 .nav-item::before {
   content: '';
   position: absolute;
-  bottom: 10px;
+  bottom: 0px;
   right: 0;
   width: 0;
   height: 2px;
@@ -119,7 +117,30 @@ html {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  width: 100%;
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.651),
+      rgba(3, 3, 3, 0.856)
+    ),
+    url("../public/images/heros/hero-image_2.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.hero-home {
+  min-height: 100vh;
+}
+
+.hero-detail, .hero-favorite {
+  min-height: 50vh;
+}
+
+.sub-hero {
+  margin-top: -5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
   background-image: linear-gradient(
       to top,
       rgba(0, 0, 0, 0.651),
@@ -140,7 +161,7 @@ html {
   margin-bottom: 5px;
 }
 
-.hero-inner .hero-title {
+.hero-title {
   color: #fea82f;
   font-weight: bolder;
   font-size: 3.4em;
@@ -148,11 +169,11 @@ html {
 }
 
 .hero-tagline {
-  font-size: 1.6em;
+  font-size: 1.4em;
   margin-bottom: 15px;
 }
 
-.hero-inner .hero-button {
+.hero-button {
   cursor: pointer;
   min-width: 44px;
   min-height: 44px;
@@ -265,14 +286,12 @@ h1 {
 
 .restaurant-rating {
   position: absolute;
-  bottom: 20px;
   left: 0px;
   background-color: #ff6701;
   color: #fff;
   padding: 5px 26px 5px 16px;
   font-size: 16px;
   border-bottom-right-radius: 10px;
-  border-top-right-radius: 10px;
 }
 
 .restaurant-rating span.material-icons, .restaurant-city span.material-icons {
@@ -321,7 +340,7 @@ div .restaurant-parent {
   color: #fff;
 }
 
-#loader {
+.loader {
   margin: 3% auto;
   text-align: center;
   z-index: 1;
@@ -331,6 +350,98 @@ div .restaurant-parent {
   border-radius: 50%;
   border-top: 16px solid #fea82f;
   animation: spin 2s linear infinite;
+}
+
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.wrapper-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 30px;
+  grid-row-gap: 60px;
+}
+
+.restaurant-detail {
+  padding: 50px 50px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.detail-photo {
+  position: relative;
+}
+
+.detail-photo img {
+  width: 100%;
+}
+
+.detail-rate {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 20px 15px 10px;
+  background-color: #fea82f;
+  color: #fff;
+  font-size: 16px;
+  border-bottom-right-radius: 30px;
+}
+
+.info-restaurant {
+  text-align: left;
+}
+
+h1.detail-rest-name {
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.category {
+  display: flex;
+  margin: 5px 0 5px 0;
+}
+
+.category-item {
+  padding: 5px 10px;
+  background-color: #fea82f;
+  border-radius: 10px;
+  color: #fff;
+  margin: 0 10px 0 0;
+}
+
+.foods-menu, .drinks-menu {
+  text-align: left;
+  color: #000000;
+}
+
+.food-name, .drink-name {
+  margin: 20px 0 10px 0;
+  font-weight: 700;
+  border-bottom: 1px solid #000000;
+}
+
+h1 span.material-icons {
+  position: relative;
+  top: 4px;
+  color: #fea82f;
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  margin: 10px 0 5px 0;
+  text-align: center;
+}
+
+.menu-item {
+  padding: 5px 5px;
+  background-color: #fea82f;
+  border-radius: 10px;
+  color: #fff;
 }
 
 @keyframes spin {
