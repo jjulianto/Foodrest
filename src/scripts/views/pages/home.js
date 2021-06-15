@@ -30,12 +30,14 @@ const Home = {
               </div>
           </section>
 
+        <div id="main">
           <section class="item">
               <h1 class="restaurant-label">Restoran yang sedang populer</h1>
               <div class="loader"></div>
               <div id="restaurant" class="restaurants">
               </div>
           </section>
+        </div>
       `;
   },
 

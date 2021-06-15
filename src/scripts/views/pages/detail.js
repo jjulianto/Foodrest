@@ -1,6 +1,9 @@
 import UrlParser from '../../routes/url-parser';
 import restaurantData from '../../data/restaurantdb-source';
-import { createDetailTemplate, createMenuTemplate, createCategoryTemplate } from '../templates/template-creator';
+import {
+  createDetailTemplate, createMenuTemplate, createCategoryTemplate, createReviewTemplate,
+} from '../templates/template-creator';
+import addReview from '../../utils/add-review';
 
 const Detail = {
   async render() {
@@ -55,6 +58,30 @@ const Detail = {
     loadIndicator.style.display = 'none';
     // eslint-disable-next-line max-len
     restaurantContainer.innerHTML = createDetailTemplate(restaurantObject, categories, foods, drinks);
+
+    const reviewContainer = document.querySelector('#review-list');
+    this.refreshReview(restaurantObject, reviewContainer);
+    const btnReview = document.querySelector('#btn-add-review');
+    btnReview.addEventListener('click', () => {
+      this.addReview(restaurantObject);
+      this.refreshReview(restaurantObject, reviewContainer);
+    });
+  },
+
+  async refreshReview(restaurantObject, reviewContainer) {
+    restaurantObject.customerReviews.forEach((review) => {
+      // eslint-disable-next-line no-param-reassign
+      reviewContainer.innerHTML += createReviewTemplate(review);
+    });
+  },
+
+  async addReview(restaurantObject) {
+    const name = document.getElementById('name').value;
+    const reviewUser = document.getElementById('review').value;
+    // eslint-disable-next-line object-shorthand
+    addReview({ id: restaurantObject.id, name: name, review: reviewUser });
+    document.getElementById('name').value = '';
+    document.getElementById('review').value = '';
   },
 
   async failedFetch(restaurantDetail, detailContainer, loadingIndicator) {

@@ -287,14 +287,20 @@ h1 {
 .restaurant-rating {
   position: absolute;
   left: 0px;
-  background-color: #ff6701;
+  background-color: #fea82f;
   color: #fff;
-  padding: 5px 26px 5px 16px;
+  padding: 5px 25px 5px 16px;
   font-size: 16px;
-  border-bottom-right-radius: 10px;
+  border-bottom-right-radius: 20px;
 }
 
-.restaurant-rating span.material-icons, .restaurant-city span.material-icons {
+.restaurant-rating span.material-icons {
+  position: relative;
+  top: 5px;
+  color: #fff !important;
+}
+
+.restaurant-city span.material-icons {
   position: relative;
   top: 5px;
   color: #fea82f !important;
@@ -416,16 +422,23 @@ h1.detail-rest-name {
   color: #000000;
 }
 
-.food-name, .drink-name {
+.food-name, .drink-name, .title-review {
   margin: 20px 0 10px 0;
   font-weight: 700;
   border-bottom: 1px solid #000000;
 }
 
-h1 span.material-icons {
+.food-name span.material-icons, .drink-name span.material-icons, .title-review span.material-icons {
   position: relative;
   top: 4px;
   color: #fea82f;
+}
+
+.waktu-review span.material-icons {
+  position: relative;
+  top: 2px;
+  font-size: 14px;
+  color: #000000;
 }
 
 .menu {
@@ -444,6 +457,124 @@ h1 span.material-icons {
   color: #fff;
 }
 
+.content-add-review {
+  margin-top: 20px;
+}
+
+.form-wrapper {
+  width: 100%;
+  padding-top: 50px;
+}
+
+.title-add-review {
+  position: relative;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.title-add-review h1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: left;
+  background-color: #fea82f;
+  padding: 5px 40px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 5px;
+  margin: 0;
+  font-size: 22px;
+}
+
+.title-add-review h1 span.material-icons {
+  position: relative;
+  top: 4px;
+  margin-right: 5px;
+}
+
+.form-group {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.form-group .input {
+  width: 100%;
+  margin: 0;
+  padding: 12px 20px;
+  border-radius: 15px;
+  box-sizing: border-box;
+  border: 2px solid #fea82f;
+  font-family: "Poppins", sans-serif;
+}
+
+.form-group textarea {
+  font-family: "Poppins", sans-serif;
+}
+
+.form-group .input:focus, .form-group textarea:focus {
+  outline: 0;
+}
+
+.form-group button {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border: none;
+  background-color: #fea82f;
+  padding: 13px 55px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+}
+
+.form-group button:focus {
+  background: #ff6701;
+  color: #fff;
+  outline: 2px solid #ff6701;
+}
+
+.form-group button:hover {
+  background: #ff6701;
+  color: #fff;
+}
+
+.line-button {
+  position: relative;
+  background-color: #fff;
+  width: 98%;
+  height: 2px;
+  margin-top: 50px;
+}
+
+.detail-reviews {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.list-review {
+  background-color: #fea82f;
+  padding: 10px 50px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.list-review p {
+  margin: 0;
+}
+
+.list-review p.nama-review {
+  font-size: larger;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.list-review p.waktu-review {
+  margin-top: 15px;
+  font-size: 13px;
+}
+
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
@@ -457,7 +588,7 @@ h1 span.material-icons {
 }
 
 footer {
-  color: #ffffff;
+  color: #fff;
   text-align: center;
   margin-top: 1rem;
   padding: 1.5rem;

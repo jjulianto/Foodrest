@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import CONFIG from '../../globals/config';
 
 const createRestaurantItemTemplate = (restaurant) => `
@@ -13,6 +14,14 @@ const createRestaurantItemTemplate = (restaurant) => `
                 </div>
             </div>
     </article>
+`;
+
+const createReviewTemplate = (review) => `
+    <div class="list-review">
+        <p class="nama-review">${review.name}</p>
+        <p class="detail-desc">${review.review}</p>
+        <p class="waktu-review"><span class="material-icons">schedule</span> ${review.date}</p>
+    </div>
 `;
 
 const createCategoryTemplate = (category) => `
@@ -56,8 +65,36 @@ const createDetailTemplate = (restaurant, category, foods, drinks) => `
             ${drinks}
         </div>
     </div>
+
+    <div class="content-add-review">
+        <div class="form-wrapper">
+            <div class="title-add-review">
+                <h1><span class="material-icons">reviews</span> Tambah Review</h1>
+            </div>
+            <form>
+                <div cLass="form-group">
+                    <input type="text" class="input" id="name" placeholder="Masukkan nama kamu..." autocomplete="off">
+                </div>
+                <div cLass="form-group">
+                    <textarea class="input" id="review" rows="3" placeholder="Masukkan review kamu..."  autocomplete="off"></textarea>
+                </div>
+                <div cLass="form-group review-btn">
+                    <div class="line-button">
+                        <button class="btn-review" id="btn-add-review">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="detail-reviews">
+        <h1 class="title-review"><span class="material-icons">textsms</span> Apa Kata Orang?</h1>
+        <div id="review-list">
+                
+        </div>
+    </div>
 `;
 
 export {
-  createRestaurantItemTemplate, createCategoryTemplate, createMenuTemplate, createDetailTemplate,
+  createRestaurantItemTemplate, createReviewTemplate, createCategoryTemplate, createMenuTemplate, createDetailTemplate,
 };
