@@ -3,17 +3,31 @@ import CONFIG from '../../globals/config';
 
 const createRestaurantItemTemplate = (restaurant) => `
     <article class="restaurant-item">
-        <img class="restaurant-thumbnail" src="${CONFIG.BASE_IMG_URL}/small/${restaurant.pictureId}" alt="${restaurant.name}">
+            <div class="img-item">
+                <p class="restaurant-rating"><span class="material-icons">star</span> ${restaurant.rating}</p>
+                <img class="restaurant-thumbnail" src="${CONFIG.BASE_IMG_URL}/small/${restaurant.pictureId}" alt="${restaurant.name}">
+            </div>
             <div class="restaurant-content">
                 <p class="restaurant-city"><span class="material-icons">room</span> ${restaurant.city}</p>
                 <h1 class="restaurant-title">${restaurant.name}</h1>
-                <p class="restaurant-rating"><span class="material-icons">star</span> ${restaurant.rating}</p>
                 <p class="restaurant-description">${restaurant.description.substr(0, 100)}</p>
                 <div class="restaurant-parent">
                     <a class="restaurant-button" href="${`/#/detail/${restaurant.id}`}">Lihat Detail</a>
                 </div>
             </div>
     </article>
+`;
+
+const createLikeButtonTemplate = () => `
+  <button aria-label="like this restaurant" class="btn-like" id="likeButton">
+    <span class="material-icons">favorite_border</span>
+  </button>
+`;
+
+const createLikedButtonTemplate = () => `
+  <button aria-label="unlike this restaurant" class="btn-like" id="likedButton">
+    <span class="material-icons">favorite</span>
+  </button>
 `;
 
 const createReviewTemplate = (review) => `
@@ -96,5 +110,5 @@ const createDetailTemplate = (restaurant, category, foods, drinks) => `
 `;
 
 export {
-  createRestaurantItemTemplate, createReviewTemplate, createCategoryTemplate, createMenuTemplate, createDetailTemplate,
+  createRestaurantItemTemplate, createLikeButtonTemplate, createLikedButtonTemplate, createReviewTemplate, createCategoryTemplate, createMenuTemplate, createDetailTemplate,
 };

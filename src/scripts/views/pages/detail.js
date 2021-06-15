@@ -3,6 +3,7 @@ import restaurantData from '../../data/restaurantdb-source';
 import {
   createDetailTemplate, createMenuTemplate, createCategoryTemplate, createReviewTemplate,
 } from '../templates/template-creator';
+import LikeButtonInitiator from '../../utils/like-button-initiator';
 import addReview from '../../utils/add-review';
 
 const Detail = {
@@ -20,6 +21,8 @@ const Detail = {
             <div class="restaurant-detail">
             </div>
         </div>
+
+        <div id="likeButtonContainer"></div>
     `;
   },
 
@@ -58,6 +61,20 @@ const Detail = {
     loadIndicator.style.display = 'none';
     // eslint-disable-next-line max-len
     restaurantContainer.innerHTML = createDetailTemplate(restaurantObject, categories, foods, drinks);
+    LikeButtonInitiator.init({
+      likeButtonContainer: document.querySelector('#likeButtonContainer'),
+      restaurant: {
+        id: restaurantObject.id,
+        pictureId: restaurantObject.pictureId,
+        name: restaurantObject.name,
+        categories: restaurantObject.categories,
+        description: restaurantObject.description,
+        menus: restaurantObject.menus,
+        consumerReviews: restaurantObject.consumerReviews,
+        city: restaurantObject.city,
+        rating: restaurantObject.rating,
+      },
+    });
 
     const reviewContainer = document.querySelector('#review-list');
     this.refreshReview(restaurantObject, reviewContainer);
@@ -90,7 +107,7 @@ const Detail = {
     const loadIndicator = loadingIndicator;
 
     loadIndicator.style.display = 'none';
-    restaurantContainer.innerHTML = '<p class="error-icon"><span class="material-icons">error</span></p>';
+    restaurantContainer.innerHTML = '<div class="icon"><p class="error-icon"><span class="material-icons">error</span></p></divc>';
     restaurantObject.innerHTML = '<h1 style="text-align: center; margin-top: 10px;">Maaf, request tidak dapat dijalankan karena terdapat kesalahan.</h1>';
   },
 };

@@ -71,7 +71,7 @@ const Home = {
     const restaurantCon = restaurantContainer;
 
     loadIndi.style.display = 'none';
-    restaurantCon.innerHTML = '<p class="error-icon"><span class="material-icons">error</span></p>';
+    restaurantCon.innerHTML = '<div class="icon"><p class="error-icon"><span class="material-icons">error</span></p></div>';
     restaurantsIt.innerHTML = '<h1 style="text-align: center; margin-top: 10px;">Maaf, request tidak dapat dijalankan karena terdapat kesalahan.</h1>';
   },
 };
