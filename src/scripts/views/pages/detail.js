@@ -107,7 +107,7 @@ const Detail = {
     const loadIndicator = loadingIndicator;
 
     loadIndicator.style.display = 'none';
-    restaurantContainer.innerHTML = '<div class="icon"><p class="error-icon"><span class="material-icons">error</span></p></divc>';
+    restaurantContainer.innerHTML = '<div class="icon"><p class="error-icon"><span class="material-icons">error</span></p></div>';
     restaurantObject.innerHTML = '<h1 style="text-align: center; margin-top: 10px;">Maaf, request tidak dapat dijalankan karena terdapat kesalahan.</h1>';
   },
 };

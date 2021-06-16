@@ -4,6 +4,7 @@ import 'regenerator-runtime';
 import '../styles/main.css';
 import '../styles/responsive.css';
 import App from './views/app';
+import swRegister from './utils/sw-register';
 
 const app = new App({
   hamburger: document.querySelector('#hamburger'),
@@ -17,4 +18,5 @@ window.addEventListener('hashchange', () => {
 
 window.addEventListener('load', () => {
   app.renderPage();
+  swRegister();
 });

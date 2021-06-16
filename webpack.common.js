@@ -1,5 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const WebpackPwaManifest = require('webpack-pwa-manifest');
+const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin');
 const path = require('path');
 
 module.exports = {
@@ -48,6 +50,28 @@ module.exports = {
           to: path.resolve(__dirname, 'dist/'),
         },
       ],
+    }),
+    new WebpackPwaManifest({
+      name: 'Foodrest',
+      short_name: 'Foodrest',
+      description: 'Explore the best Restaurant',
+      theme_color: '#fea82f',
+      background_color: '#fea82f',
+      start_url: '/index.html',
+      display: 'standalone',
+      icons: [
+        {
+          src: path.resolve(__dirname, 'src/public/images/icons/icon.png'),
+          sizes: [96, 120, 128, 152, 167, 180, 192, 256, 384, 512, 1024],
+          type: 'image/png',
+          purpose: 'any maskable',
+          destination: path.join('images', 'icons'),
+          ios: true,
+        },
+      ],
+    }),
+    new ServiceWorkerWebpackPlugin({
+      entry: path.resolve(__dirname, 'src/scripts/sw.js'),
     }),
   ],
 };

@@ -127,10 +127,6 @@ html {
   background-size: cover;
 }
 
-.hero-home {
-  min-height: 100vh;
-}
-
 .hero-detail, .hero-favorite {
   min-height: 50vh;
 }
@@ -140,7 +136,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 50vh;
+  min-height: 60vh;
   background-image: linear-gradient(
       to top,
       rgba(0, 0, 0, 0.651),
