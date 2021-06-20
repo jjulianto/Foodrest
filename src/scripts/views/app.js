@@ -28,8 +28,12 @@ class App {
   async renderPage() {
     const url = UrlParser.parseActiveUrlWithCombiner();
     const page = routes[url];
-    this._content.innerHTML = await page.render();
-    await page.afterRender();
+    try {
+      this._content.innerHTML = await page.render();
+      await page.afterRender();
+    } catch (err) {
+      this._content.innerHTML = '<div class="wrapper"><div class="sub-hero"><div class="hero-inner"><p class="hero-text">Welcome to</p><h1 class="hero-title">Foodrest</h1></div></div><div class="icon"><p class="error-icon"><span class="material-icons">error</span></p></div><h1 style="text-align: center; margin-top: 10px;">Maaf, request tidak dapat dijalankan karena terdapat kesalahan.</h1></div>';
+    }
   }
 }
 
