@@ -12,7 +12,7 @@ class RestaurantItem extends HTMLElement {
         <article class="restaurant-item">
             <div class="img-item">
                 <p class="restaurant-rating"><span class="material-icons">star</span> ${this._data.rating}</p>
-                <img class="restaurant-thumbnail" src="${CONFIG.BASE_IMG_URL}/small/${this._data.pictureId}" alt="${this._data.name}">
+                <img class="restaurant-thumbnail lazyload" data-src="${CONFIG.BASE_IMG_URL}/small/${this._data.pictureId}" alt="${this._data.name}">
             </div>
             <div class="restaurant-content">
                 <p class="restaurant-city"><span class="material-icons">room</span> ${this._data.city}</p>

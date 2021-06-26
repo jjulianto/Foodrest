@@ -1,6 +1,8 @@
 // eslint-disable-next-line import/no-unresolved
 // eslint-disable-next-line import/no-extraneous-dependencies
 import 'regenerator-runtime';
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 import '../styles/main.css';
 import '../styles/responsive.css';
 import App from './views/app';
