@@ -15,8 +15,8 @@ const Favorite = {
             <div class="loader"></div>
             <div class="icon">
                 <p class="info-icon"><span class="material-icons">info</span></p>
+                <h1 style="text-align: center; margin-top: 10px; padding: 0 10px 0 10px;" id="empty">Tidak ada restoran yang anda favoritkan.</h1>
             </div>
-            <h1 style="text-align: center; margin-top: 10px; padding: 0 10px 0 10px;" id="empty">Tidak ada restoran yang anda favoritkan.</h1>
             <div id="restaurant" class="restaurants">
             </div>
         </div>

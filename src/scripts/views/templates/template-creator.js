@@ -18,13 +18,13 @@ const createRestaurantItemTemplate = (restaurant) => `
     </article>
 `;
 
-const createLikeButtonTemplate = () => `
+const createLikeRestaurantButtonTemplate = () => `
   <button aria-label="like this restaurant" class="btn-like" id="likeButton">
     <span class="material-icons">favorite_border</span>
   </button>
 `;
 
-const createLikedButtonTemplate = () => `
+const createUnlikeRestaurantButtonTemplate = () => `
   <button aria-label="unlike this restaurant" class="btn-like" id="likedButton">
     <span class="material-icons">favorite</span>
   </button>
@@ -110,5 +110,5 @@ const createDetailTemplate = (restaurant, category, foods, drinks) => `
 `;
 
 export {
-  createRestaurantItemTemplate, createLikeButtonTemplate, createLikedButtonTemplate, createReviewTemplate, createCategoryTemplate, createMenuTemplate, createDetailTemplate,
+  createRestaurantItemTemplate, createLikeRestaurantButtonTemplate, createUnlikeRestaurantButtonTemplate, createReviewTemplate, createCategoryTemplate, createMenuTemplate, createDetailTemplate,
 };

@@ -70,7 +70,7 @@ const Detail = {
         categories: restaurantObject.categories,
         description: restaurantObject.description,
         menus: restaurantObject.menus,
-        consumerReviews: restaurantObject.consumerReviews,
+        customerReviews: restaurantObject.customerReviews,
         city: restaurantObject.city,
         rating: restaurantObject.rating,
       },
@@ -96,7 +96,7 @@ const Detail = {
     const name = document.getElementById('name').value;
     const reviewUser = document.getElementById('review').value;
     // eslint-disable-next-line object-shorthand
-    addReview({ id: restaurantObject.id, name: name, review: reviewUser });
+    await addReview({ id: restaurantObject.id, name: name, review: reviewUser });
     document.getElementById('name').value = '';
     document.getElementById('review').value = '';
   },
