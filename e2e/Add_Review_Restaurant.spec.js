@@ -6,7 +6,8 @@ Before(({ I }) => {
 });
 
 Scenario('Add Review', ({ I }) => {
-  I.amOnPage('/');
+  const reviewText = 'Review with E2E Testing';
+
   I.seeElement('.restaurant-item div a');
   const firstRestaurant = locate('.restaurant-item div a').first();
   I.click(firstRestaurant);
@@ -15,8 +16,8 @@ Scenario('Add Review', ({ I }) => {
   I.seeElement('textarea#review');
   I.seeElement('button#btn-add-review');
   I.fillField('input#name', 'E2E Testing');
-  I.fillField('textarea#review', 'Review with E2E Testing');
+  I.fillField('textarea#review', reviewText);
   I.click('button#btn-add-review');
 
-  I.seeElement('.list-review');
+  I.see(reviewText, 'p.detail-desc');
 });

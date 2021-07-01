@@ -110,5 +110,11 @@ const createDetailTemplate = (restaurant, category, foods, drinks) => `
 `;
 
 export {
-  createRestaurantItemTemplate, createLikeRestaurantButtonTemplate, createUnlikeRestaurantButtonTemplate, createReviewTemplate, createCategoryTemplate, createMenuTemplate, createDetailTemplate,
+  createRestaurantItemTemplate,
+  createLikeRestaurantButtonTemplate,
+  createUnlikeRestaurantButtonTemplate,
+  createReviewTemplate,
+  createCategoryTemplate,
+  createMenuTemplate,
+  createDetailTemplate,
 };
