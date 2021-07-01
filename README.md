@@ -34,6 +34,7 @@
 
 ## About The Project
 A website about the best restaurants in Indonesia which was created using a webpack and PWA. Check it the live project [here](https://foodrest-app.web.app/)
+Note: Hard refresh to see your new submitted review
 
 ### Built With
 
