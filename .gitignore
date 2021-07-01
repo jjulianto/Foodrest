@@ -112,6 +112,7 @@ dist
 
 ### Firebase ###
 .idea
+.github
 **/node_modules/*
 **/.firebaserc
 
