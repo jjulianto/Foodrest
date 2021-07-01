@@ -33,8 +33,8 @@
 - [License](#license)
 
 ## About The Project
-A website about the best restaurants in Indonesia which was created using a webpack and PWA. Check it the live project [here](https://foodrest-app.web.app/)
-Note: Hard refresh to see your new submitted review
+A website about the best restaurants in Indonesia which was created using a webpack and PWA. Check it the live project [here](https://foodrest-app.web.app/)<br>
+Note: Hard refresh by pressing CTRL + F5 on windows and CMD + SHIFT + R on Mac to see your new submitted review
 
 ### Built With
 
