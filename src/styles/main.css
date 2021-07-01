@@ -48,6 +48,8 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+  z-index: 1;
 }
 
 .header-logo {
@@ -118,8 +120,10 @@ html {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
+  width: 99.6vw;
+  position: relative;
+  margin-left: -50vw;
+  left: 50%;
   background-image: linear-gradient(
       to top,
       rgba(0, 0, 0, 0.651),
@@ -140,8 +144,10 @@ html {
   align-items: center;
   justify-content: center;
   min-height: 60vh;
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
+  width: 99.6vw;
+  position: relative;
+  margin-left: -50vw;
+  left: 50%;
   background-image: linear-gradient(
       to top,
       rgba(0, 0, 0, 0.651),
