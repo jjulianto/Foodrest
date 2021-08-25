@@ -51,6 +51,7 @@
 
 @media only screen and (min-width: 601px) and (max-width: 992px) {
   .hero {
+    width: 100vw;
     background-image: linear-gradient(
         to top,
         rgba(0, 0, 0, 0.651),
@@ -59,6 +60,7 @@
       url("/images/heros/hero-image_2-large.jpg");
   }
   .sub-hero {
+    width: 100vw;
     background-image: linear-gradient(
         to top,
         rgba(0, 0, 0, 0.651),
@@ -169,15 +171,6 @@
     padding: 10px 0 !important;
     display: list-item;
     text-align: left;
-  }
-  .nav-item a {
-    color: #fff;
-  }
-  .nav-item a:focus {
-    display: inline-block;
-    border-bottom: 2px solid #fff;
-    padding-bottom: 2px;
-    width: 100%;
   }
   .restaurant-label {
     padding-top: 0;
